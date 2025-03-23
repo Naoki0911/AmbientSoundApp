@@ -14,8 +14,6 @@ public class MainFrame extends JFrame {
     setSize(400, 300);
     setLayout(new BorderLayout());
 
-        // RainSoundオブジェクトの生成
-        // プロジェクトのルートディレクトリに「sounds」フォルダを作成し、その中に「rain.wav」を配置する想定です。
     List<SoundSetting> soundList = new ArrayList<>();
     soundList.add(new RainSound());
     soundList.add(new WaveSound());
