@@ -4,13 +4,13 @@ import javax.sound.sampled.*;
 import java.io.File;
 import java.io.IOException;
 
-public class SoundSetting implements Sound {
+public class ChillSound implements Sound {
     private Clip clip;
     private FloatControl volumeControl;
     private float volume = 0.5f; // 初期音量
     private String name;
 
-    public SoundSetting(String filePath, String name) {
+    public ChillSound(String filePath, String name) {
     	this.name = name;
         try {
             // 音声ファイルを読み込む

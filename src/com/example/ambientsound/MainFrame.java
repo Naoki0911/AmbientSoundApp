@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainFrame extends JFrame {
-  private Sound rainSound;
 
   public MainFrame() {
     super("Ambient Sound App");
@@ -14,16 +13,16 @@ public class MainFrame extends JFrame {
     setSize(400, 300);
     setLayout(new BorderLayout());
 
-    List<SoundSetting> soundList = new ArrayList<>();
-    soundList.add(new RainSound());
-    soundList.add(new WaveSound());
+    List<ChillSound> soundList = new ArrayList<>();
+    soundList.add(new ChillSound("sounds/rain.wav", "雨"));
+    soundList.add(new ChillSound("sounds/wave.wav", "波"));
 
         // パネルの作成
     JPanel mainPanel = new JPanel();
     mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
 
     // soundList の各要素に対して UI を動的に生成する
-    for (SoundSetting sound : soundList) {
+    for (ChillSound sound : soundList) {
         // 個別のパネルを作成（タイトル付きの枠で音源名を表示）
         JPanel soundPanel = new JPanel(new BorderLayout());
         soundPanel.setBorder(BorderFactory.createTitledBorder(sound.getName()));
