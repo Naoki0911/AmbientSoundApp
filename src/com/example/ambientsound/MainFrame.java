@@ -15,7 +15,7 @@ public class MainFrame extends JFrame {
 
     List<ChillSound> soundList = new ArrayList<>();
     soundList.add(new ChillSound("sounds/rain.wav", "雨"));
-    soundList.add(new ChillSound("sounds/wave.wav", "波"));
+    soundList.add(new ChillSound("sounds/wave.wav", ""));
 
         // パネルの作成
     JPanel mainPanel = new JPanel();
